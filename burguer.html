@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer do Alemão</title>
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones FontAwesome -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="burguer.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <!-- Logo com Ícone -->
+            <h1 class="logo"><i class="fa-solid fa-burger"></i> Burguer do Alemão</h1>
+
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="#cardapio">🍔 Cardápio</a></li>
+                    <li><a href="#redes">📱 Redes Sociais</a></li>
+                    <li><a href="#contato">📍 Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Cardápio -->
+    <section id="cardapio">
+        <h2>Nosso Cardápio</h2>
+        <ul>
+            <li>🍔 X-Burger - R$ 15,00</li>
+            <li>🥓 X-Bacon - R$ 18,00</li>
+            <li>🧀 X-Tudo - R$ 22,00</li>
+        </ul>
+    </section>
+
+    <!-- Seção Redes Sociais -->
+    <section id="redes">
+        <h2>Nos siga nas redes sociais!</h2>
+        <p>Instagram: @burguerdoalemao</p>
+        <p>Facebook: Burguer do Alemão</p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>📍 Endereço: Rua dos Hambúrgueres, 123</p>
+        <p>📞 Telefone: (11) 99999-9999</p>
+    </section>
+
+    <!-- Script para esconder o cabeçalho ao rolar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let prevScrollPos = window.scrollY;
+            const header = document.querySelector("header");
+
+            window.addEventListener("scroll", function () {
+                let currentScrollPos = window.scrollY;
+                
+                if (prevScrollPos > currentScrollPos) {
+                    header.style.transform = "translateY(0)";
+                } else {
+                    header.style.transform = "translateY(-100%)";
+                }
+                
+                prevScrollPos = currentScrollPos;
+            });
+        });
+    </script>
+</body>
+</html>
